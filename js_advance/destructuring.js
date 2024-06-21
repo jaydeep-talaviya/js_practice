@@ -162,10 +162,21 @@ const data = [
 const {title,author,pages,publicationDate,genres,hasMovieAdaptation} = book;
     
 // author
-console.log(title,author)
-publicationDate
-genres
+console.log(title,author,publicationDate,genres)
+// publicationDate
+// genres
 
-const [science,humor] = genres
-science
-humor
+
+
+//  spread operators
+
+const [science,humor,...otherGenres] = genres
+
+
+console.log(science,humor,otherGenres)
+
+const newGenres = [...genres,'new genre']
+console.log(newGenres)
+
+const updateBook = {...book,moviePublicationDate: "2001-12-19"}
+console.log(updateBook)
