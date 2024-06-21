@@ -150,7 +150,7 @@ const data = [
   const books= getBooks()
   console.log(books)
 
-  const book = getBook(2);
+  const book = getBook(3);
 
 //   const title = book.title
 //   title
@@ -180,3 +180,11 @@ console.log(newGenres)
 
 const updateBook = {...book,moviePublicationDate: "2001-12-19"}
 console.log(updateBook)
+
+function getTotalReviewCount(book){
+    const goodreads = book.reviews.goodreads.reviewsCount;
+    const librarything = book.reviews.librarything?.reviewsCount??0;
+    return goodreads + librarything
+}
+
+console.log(getTotalReviewCount(book))
